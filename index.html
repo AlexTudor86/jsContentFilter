@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Filtru de continut</title>
+		<link rel="stylesheet" href="main.css">
+	</head>
+
+	<body>
+		
+		<div id="filtru">
+			<form autocomplete="off">
+				<input type="text" id="search">
+				<small>Minim 3 caractere !</small>
+				<br><br>
+				<div>
+					Model
+					<select id="model">
+						<option value="all" selected="selected">All</option>
+						<option value="acer">Acer</option>
+						<option value="apple">Apple</option>
+						<option value="asus">Asus</option>					
+						<option value="dell">Dell</option>
+						<option value="fujitsu">Fujitsu</option>
+						<option value="hp">HP</option>
+						<option value="lenovo">Lenovo</option>
+						<option value="microsoft">Microsoft</option>
+					</select>
+				</div>
+				<div>
+					Procesor
+					<select id="procesor">
+						<option value="all" selected="selected">All</option>
+						<option value="intel">Intel</option>
+						<option value="amd">AMD</option>
+					</select>
+				</div>
+				<div>
+					Pret
+					<input type="text" id="pret">
+					<br><br>
+					<input type="radio" name="pret" value="min" checked="checked">Minim
+					<input type="radio" name="pret" value="max">Maxim
+				</div>
+				<!-- To be implemented : trebuie facut un array cu preturi, pe care aplicam metoda .sort 
+				care ia ca param o fct de callback; trebuie tinut cont de valoarea selectorului
+				ex: price_arr.sort((a, b) => b - a)
+				<div>
+					Ordoneaza
+					<select id="sort">
+						<option value="asc" selected="selected">Crescator</option>
+						<option value="desc">Descrescator</option>
+					</select>
+				</div>-->
+			
+				<input type="submit" value="Cauta" id="cauta">
+			</form>
+			<br><hr>
+			<div id="results"></div>
+		</div>
+		
+		
+		<div id="content"></div>
+
+
+
+		<script src="generare_continut.js"></script>
+		<script src="filtru.js"></script>
+	</body>
+
+</html>
